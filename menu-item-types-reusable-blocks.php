@@ -69,10 +69,12 @@ add_action( 'admin_enqueue_scripts', 'mitypes_rblocks_enqueue_nav_item_styles' )
 
 
 /**
- * Handle attributes builder ( skip some attr )
+ * Handle attributes : skip href
  */
-function mitypes_rblocks_attributes_skiper( $skip, $custom_item_type, $attr, $value ) {
-	if( ( 'wpblock' === $custom_item_type ) && ( ( 'href'=== $attr ) ) ){ return true ; }	
+
+function mitypes_rblocks_attributes_skiper( $atts, $item, $args, $depth, $custom_item_type ){
+	if( ( 'wpblock' === $custom_item_type ) ){ unset( $atts['href'] ); }
+	return $atts ;
 }
 
-add_filter( 'mitypes_nav_menu_link_attributes_builder_skip', 'mitypes_rblocks_attributes_skiper', 11, 4 );
+add_filter( 'mitypes_nav_menu_link_attributes', 'mitypes_rblocks_attributes_skiper', 11, 5 );
