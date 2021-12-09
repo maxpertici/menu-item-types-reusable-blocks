@@ -3,7 +3,7 @@
 Plugin Name:  Menu Item Types — Reusable Blocks
 Plugin URI:   #
 Description:  —
-Version:      1.0
+Version:      1.1
 Author:       @maxpertici
 Author URI:   https://maxpertici.fr
 Contributors:
