@@ -2,10 +2,9 @@
 
 defined( 'ABSPATH' ) or	die();
 
+
+
 if( function_exists('acf_add_local_field_group') ){
-    
-    // Field data
-    // include( WPAM_CORE_PATH . 'item-types.php' ) ;
 
     acf_add_local_field_group(array(
         
@@ -22,7 +21,7 @@ if( function_exists('acf_add_local_field_group') ){
                 
                 'instructions' => 
                     sprintf(
-                        __( 'Choose your <a href="edit.php?post_type=wp_block">%s</a> or <a href="post-new.php?post_type=wp_block">%s</a> if empty.', 'menu-item-types' ) ,
+                        __( 'Choose your <a href="edit.php?post_type=wp_block">%s</a> or <a href="post-new.php?post_type=wp_block">%s</a>.', 'menu-item-types' ) ,
                         __( 'reusable block', 'menu-item-types' ),
                         __( 'create one', 'menu-item-types' )
                     ),
@@ -51,10 +50,8 @@ if( function_exists('acf_add_local_field_group') ){
         'location' => array(
             array(
                 array(
-                    // 'param' => 'nav_menu_item',
                     'param' => 'mitypes',
                     'operator' => '==',
-                    // 'value' => 'all',
                     'value' => 'wpblock',
                 ),
             ),

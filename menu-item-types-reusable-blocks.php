@@ -15,6 +15,8 @@ Domain Path:  /languages
 
 defined( 'ABSPATH' ) or	die();
 
+
+
 /**
  * Run plugin - test
  * @since 1.0
@@ -33,7 +35,6 @@ add_action( 'plugins_loaded', 'mitypes_rblocks_run' );
 
 
 
-
 /**
  * Add custom nav menu item
  */
@@ -49,40 +50,6 @@ function mitypes_rblocks_add_item_types( $types ){
 }
 
 add_filter( 'mitypes_item_types', 'mitypes_rblocks_add_item_types' );
-
-
-/**
- * Show Reusable Blocks Menu
- */
-function mitypes_rblocks_menu_display( $type, $args ) {
-	if ( 'wp_block' !== $type ) { return; }
-	$args->show_in_menu = true;
-	$args->_builtin = false;
-	$args->labels->name = esc_html__( 'Reusable Blocks', 'mitypes-reusable-blocks' );
-	$args->labels->menu_name = esc_html__( 'Reusable Blocks', 'mitypes-reusable-blocks' );
-	$args->menu_icon = 'dashicons-screenoptions';
-	$args->menu_position = 58;
-}
-
-
-add_action( 'registered_post_type', 'mitypes_rblocks_menu_display', 10, 2 );
-
-
-/**
- * Enqueue css on nav-menu screen
- */
-
-function mitypes_rblocks_enqueue_nav_item_styles( $hook ) {
-
-	if ( 'nav-menus.php' != $hook ) {
-        return;
-    }
-
-	wp_register_style( 'mitypes-rblocks', plugin_dir_url( __FILE__ ) . 'css/mitypes-reusable-blocks.css', array( 'mitypes_nav_menu_style' ), '1.0' );
-	wp_enqueue_style( 'mitypes-rblocks' );
-}
-
-// add_action( 'admin_enqueue_scripts', 'mitypes_rblocks_enqueue_nav_item_styles' );
 
 
 
