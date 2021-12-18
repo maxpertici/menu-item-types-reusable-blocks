@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name:  Menu Item Types — Reusable Blocks
-Plugin URI:   #
-Description:  —
+Plugin URI:   https://maxpertici.fr#menu-item-types
+Description:  Add the ability to use reusable blocks inyour nav menu
 Version:      1.1
 Author:       @maxpertici
 Author URI:   https://maxpertici.fr
