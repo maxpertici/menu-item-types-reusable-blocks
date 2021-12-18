@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Menu Item Types — Reusable Blocks\n"
-"POT-Creation-Date: 2021-12-18 21:44+0100\n"
+"POT-Creation-Date: 2021-12-18 21:47+0100\n"
 "PO-Revision-Date: 2021-12-18 21:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -64,7 +64,7 @@ msgid "https://maxpertici.fr#menu-item-types"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Add the ability to use reusable blocks inyour nav menu"
+msgid "Add the ability to use reusable blocks in your nav menu"
 msgstr ""
 
 #. Author of the plugin/theme
